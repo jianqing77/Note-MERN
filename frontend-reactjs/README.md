@@ -1,4 +1,4 @@
-# ReactJS
+# Frontend - ReactJS
 
 The frontend of a web application is the part that users interact with. It's everything that you see when you're navigating around the Internet, from fonts and colors to dropdown menus and sliders.&#x20;
 
@@ -22,13 +22,11 @@ The frontend of a web application is the part that users interact with. It's eve
 
 </details>
 
-<mark style="color:yellow;">**Q: Redux & React Relationship？**</mark>
+<details>
 
-<div align="left">
+<summary><mark style="color:yellow;"><strong>Q: Redux &#x26; React Relationship？</strong></mark></summary>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
+<img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
 
 1. **独立但互补的库**：
    * **React : **<mark style="color:orange;">**构建用户界面**</mark>**的 JavaScript 库**。
@@ -45,3 +43,5 @@ The frontend of a web application is the part that users interact with. It's eve
 4. **结果**：
    * React 和 Redux 的组合提供了一种强大的方式，可以在 React 的组件化界面构建基础上，使用 Redux 来管理应用的状态。
    * 这种组合使得开发者可以在构建大型、复杂的前端应用时，保持代码的可维护性和可预测性。
+
+</details>
