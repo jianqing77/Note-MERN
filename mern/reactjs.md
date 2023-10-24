@@ -22,71 +22,7 @@ The frontend of a web application is the part that users interact with. It's eve
 
 </details>
 
-<details>
-
-<summary><mark style="color:yellow;">Redux</mark>: manage application state</summary>
-
-<mark style="color:orange;">**Redux的定义**</mark>
-
-* Redux 是一个 JavaScript Library，提供了一种可预测的状态管理容器。
-
-Reducer的定义
-
-
-
-Redux架构: 如何manage application state
-
-
-
-* 例子
-  * 顾客（React Component）想吃点东西，于是就把吃啥告诉了服务员（Action Creators）&#x20;
-  * 服务员（Action Creators）就用菜单（dispatch）记录（action）下来，点了什么菜（type），和数量（data）。&#x20;
-  * 然后把菜单（ dispatch(action) ）交给了老板（Store），老板就根据菜单上的内容，告诉给厨师（Reducers）让他炒什么菜&#x20;
-  * 厨师（Reducers）收到老板的指示后，迅速的把菜做好。并端给（return newState）老板（Store）。&#x20;
-  * 菜放到老板这后，老板（Store）就通知顾客（React Component）来取餐（getState）![](../.gitbook/assets/image.png)&#x20;
-
-<mark style="color:orange;">**Redux的工作方式**</mark>
-
-*
-
-
-
-```
-+-------------+  dispatch(action)   +------------+      +------------+
-|             | ------------------> |            |      |            |
-|   Actions   |                     |   Redux    |      |   Reducer  |
-|             | <------------------ |   Store    | <--- |            |
-+-------------+     new state       +------------+      +------------+
-
-```
-
-```
-+-----------------+    useSelector()      +-----------------+
-|                 | <------------------   |                 |
-|   React         |                       |   Redux Store   |
-|   Component     | --------------------> |   (State)       |
-|   (UI)          |    useDispatch()      +-----------------+
-|                 |          |                  ^
-+-----------------+          |                  |
-         ^                   |                  |
-         |                   | dispatch(action) |
-+-----------------+          |                  |
-|  Actions        | ---------+                  |
-|  (Commands)     |                             |
-+-----------------+                             |
-         ^                                      |
-         |                                      |
-+-----------------+                             |
-|  Reducers       | ----------------------------+
-|  (Logic)        |
-+-----------------+
-```
-
-</details>
-
-
-
-<mark style="color:yellow;">**Q: Redux和React的关系是什么？**</mark>
+<mark style="color:yellow;">**Q: Redux & React Relationship？**</mark>
 
 <div align="left">
 

@@ -1,4 +1,10 @@
+---
+description: manage application state
+---
+
 # Redux
+
+![](../.gitbook/assets/image.png)
 
 <details>
 
@@ -14,8 +20,6 @@
   * Store can be updated only with actions( an object describing an event)
 
 </details>
-
-![](../.gitbook/assets/image.png)
 
 <details>
 
@@ -40,6 +44,28 @@
 <details>
 
 <summary>Workflow</summary>
+
+```
++-----------------+    useSelector()      +-----------------+
+|                 | <------------------   |                 |
+|   React         |                       |   Redux Store   |
+|   Component     | --------------------> |   (State)       |
+|   (UI)          |    useDispatch()      +-----------------+
+|                 |          |                  ^
++-----------------+          |                  |
+         ^                   |                  |
+         |                   | dispatch(action) |
++-----------------+          |                  |
+|  Actions        | ---------+                  |
+|  (Commands)     |                             |
++-----------------+                             |
+         ^                                      |
+         |                                      |
++-----------------+                             |
+|  Reducers       | ----------------------------+
+|  (Logic)        |
++-----------------+
+```
 
 * &#x20;      <mark style="background-color:orange;">**Redux Side**</mark>         &#x20;
   * <mark style="color:red;">**Actions:**</mark> create actions/<mark style="color:yellow;">**action.js**</mark>&#x20;
@@ -66,6 +92,12 @@
 * an action is dispatched to store \
   \=> Redux call corresponded reducer => pass current state and action as params to reducer\
   \=> reducer check the action type => decide how to update the state => return  new state
+* 例子
+  * 顾客（React Component）想吃点东西，于是就把吃啥告诉了服务员（Action Creators）&#x20;
+  * 服务员（Action Creators）就用菜单（dispatch）记录（action）下来，点了什么菜（type），和数量（data）。&#x20;
+  * 然后把菜单（ dispatch(action) ）交给了老板（Store），老板就根据菜单上的内容，告诉给厨师（Reducers）让他炒什么菜&#x20;
+  * 厨师（Reducers）收到老板的指示后，迅速的把菜做好。并端给（return newState）老板（Store）。&#x20;
+  * 菜放到老板这后，老板（Store）就通知顾客（React Component）来取餐（getState）
 
 </details>
 
