@@ -2,7 +2,7 @@
 description: manage application state
 ---
 
-# Redux
+# Redux: manage state
 
 ![](../.gitbook/assets/image.png)
 
@@ -103,7 +103,7 @@ description: manage application state
 
 <details>
 
-<summary>Demo</summary>
+<summary>✅ Demo</summary>
 
 &#x20;      <mark style="background-color:orange;">**Redux Side**</mark>         &#x20;
 
